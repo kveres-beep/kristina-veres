@@ -1,0 +1,135 @@
+/* Pricing Section */
+.pricing-wrapper {
+  position: relative;
+  margin-top: 150px;
+  overflow: visible; 
+}
+
+
+.pricing-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -35vh;                 
+  transform: translateX(-50%);
+  width: 120%;                   
+  height: 80vh;                 
+  background-image: url('../images/img3.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 70% auto;     
+  opacity: 0.94;                 
+  filter: blur(6px) saturate(1.05);
+  z-index: 0;                    
+  pointer-events: none;
+  will-change: transform, filter;
+}
+
+
+.pricing-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(8,10,12,0.06));
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+.pricing-bg-text {
+  z-index: 3;
+}
+
+.pricing-cards {
+  z-index: 10;
+}
+
+
+@media (max-width: 900px) {
+  .pricing-wrapper::before {
+    bottom: -25vh;
+    height: 50vh;
+    background-size: 100% auto;
+    opacity: 0.85;
+    filter: blur(8px) saturate(1.02);
+  }
+}
+
+.pricing-bg-text {
+  position: absolute;
+  top: -90px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 140px;
+  font-weight: 800;
+  color: rgba(30, 35, 45, 0.4);
+  letter-spacing: 15px;
+  filter: blur(10px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.pricing-cards {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.card {
+  flex: 1;
+  background: var(--glass-dark-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  color: var(--white);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 15px 0;
+  opacity: 0.6;
+}
+
+.card .price {
+  font-size: 52px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card li {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
