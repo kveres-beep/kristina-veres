@@ -1,0 +1,47 @@
+/* About Section */
+.about-section {
+  color: var(--white);
+  margin: 0 auto 120px auto;
+  position: relative;
+  max-width: 900px;
+  text-align: left; 
+  padding: 40px 60px; 
+  z-index: 10;
+}
+
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 35, 45, 0.85); /* Темна основа */
+  filter: blur(60px); /* Сильне розмиття країв */
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.about-section h2 {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  text-shadow: none; 
+}
+
+.about-section p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-weight: 400; 
+  text-shadow: none; 
+  color: rgba(255, 255, 255, 0.9); 
+}
+
+.about-section p strong {
+  font-weight: 600;
+  color: var(--white);
+}
